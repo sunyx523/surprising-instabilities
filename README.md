@@ -69,10 +69,6 @@ We provide the code for showing error amplification occurs in the (non-linear) g
 It generates the data for Figure 4(right). Run:
 ```./single_layer/PySun2.py```
 
-### 5 Pretained data
-Pretrained data could be downloaded at 
-
-
 ## Thanks
 
 This research was supported in part by Army Research Labs (ARL) W911NF-22-1-0267 and Raytheon
