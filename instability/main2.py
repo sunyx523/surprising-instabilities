@@ -33,8 +33,8 @@ parser.add_argument('--lr0', type=float, default=0.1, help='learning rate')
 parser.add_argument('--momentum', type=float, default=0, help='momentum')
 parser.add_argument('--Nesterov', type=bool, default=False, help='Nesterov')
 parser.add_argument('--weight_decay', type=float, default=5e-4, help='weight decay')
-parser.add_argument('--n', type=int, default=1, help='inital learning rate')
-parser.add_argument('--result_root', type=str, default='../parameter/iteration/', help='result root')
+parser.add_argument('--n', type=int, default=1, help='inital learning rate divisor')
+parser.add_argument('--result_root', type=str, default='../result/parameter/nlayer/', help='result root')
 args = parser.parse_args()
 
 # Initialize random seed

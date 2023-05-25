@@ -4,13 +4,13 @@ import os.path
 import matplotlib.pyplot as plt
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 
-loss1 = np.load('./result/loss/linear/loss_alpha11000000.0.npy')
-loss2 = np.load('./result/loss/linear/loss_alpha12000000.0.npy')
-loss3 = np.load('./result/loss/linear/loss_alpha13000000.0.npy')
-loss4 = np.load('./result/loss/linear/loss_alpha190000000.0.npy')
-loss5 = np.load('./result/loss/linear/loss_alpha200000000.0.npy')
-loss6 = np.load('./result/loss/linear/loss_alpha210000000.0.npy')
-loss7 = np.load('./result/loss/linear/loss_alpha220000000.0.npy')
+loss1 = np.load('../result/loss/linear/loss_alpha11000000.0.npy')
+loss2 = np.load('../result/loss/linear/loss_alpha12000000.0.npy')
+loss3 = np.load('../result/loss/linear/loss_alpha13000000.0.npy')
+loss4 = np.load('../result/loss/linear/loss_alpha190000000.0.npy')
+loss5 = np.load('../result/loss/linear/loss_alpha200000000.0.npy')
+loss6 = np.load('../result/loss/linear/loss_alpha210000000.0.npy')
+loss7 = np.load('../result/loss/linear/loss_alpha220000000.0.npy')
 
 plt.loglog(loss1[:500], label=r'$\alpha = 1.1e7 < \alpha_{min}$')
 plt.loglog(loss2[:500], label=r'$\alpha = 1.2e7 < \alpha_{min}$')

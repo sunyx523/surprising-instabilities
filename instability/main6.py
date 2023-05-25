@@ -20,7 +20,7 @@ parser.add_argument('--momentum', type=float, default=0.9, help='momentum')
 parser.add_argument('--Nesterov', type=bool, default=True, help='Nesterov')
 parser.add_argument('--weight_decay', type=float, default=5e-4, help='weight decay')
 parser.add_argument('--nepoch', type=int, default=200, help='total epoch number')
-parser.add_argument('--result_root', type=str, default='../result/', help='result root')
+parser.add_argument('--result_root', type=str, default='../result/parameter/accuracy/', help='result root')
 args = parser.parse_args()
 
 from resnet import * #ReLU activation

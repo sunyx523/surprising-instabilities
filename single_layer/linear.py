@@ -14,7 +14,7 @@ ksize = 32
 isize = 256
 weight_decay = 2.1e8
 sigmoid_shift = 0
-address = './loss/'
+address = '../result/loss/'
 
 # Input image
 images = np.ones((1, 1, isize, isize))

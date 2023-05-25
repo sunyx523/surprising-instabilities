@@ -194,7 +194,7 @@ learning_rate = 0.07
 ksize = 32
 isize = 256
 weight_decay = 20
-address = './loss/'
+address = '../result/loss/nonlinear/'
 
 # Input image
 images = np.ones((1, 1, isize, isize))

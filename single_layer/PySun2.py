@@ -197,8 +197,8 @@ learning_rate = 0.05
 ksize = 32
 isize = 256
 weight_decay = 20
-address1 = '../parameter/numpy/checkerboard/lr' + str(learning_rate) + '_L' + str(weight_decay) + '/1/'
-address2 = '../parameter/numpy/checkerboard/lr' + str(learning_rate) + '_L' + str(weight_decay) + '/2/'
+address1 = '../parameter/1layer/lr' + str(learning_rate) + '_L' + str(weight_decay) + '/1/'
+address2 = '../parameter/1layer/lr' + str(learning_rate) + '_L' + str(weight_decay) + '/2/'
 if not os.path.exists(address1):
         os.makedirs(address1)
 if not os.path.exists(address2):

@@ -3,40 +3,40 @@ clear all;
 L2 = zeros(1000,1);
 interval = 100;
 L2_average = zeros(size(L2,1)- interval,1);
-folder = 'numpy';
+folder = '../result/parameter/1layer';
 
 for epoch = 1:1000
 
-    load(['./', folder, '/dt0.01_L20/1_1/',num2str(epoch), '_conv_weight.mat']);
+    load([folder, '/dt0.01_L20/1_1/',num2str(epoch), '_conv_weight.mat']);
     conv_weight1 = conv_weight;
-    load(['./', folder, '/dt0.01_L20/1_2/',num2str(epoch), '_conv_weight.mat']);
+    load([folder, '/dt0.01_L20/1_2/',num2str(epoch), '_conv_weight.mat']);
     conv_weight2 = conv_weight;
     L2(epoch,1) = 2*mean(mean((abs(conv_weight1(:) - conv_weight2(:)))./(abs(conv_weight1(:)) + abs(conv_weight2(:)))));
 
-    load(['./', folder, '/dt0.03_L20/1_1/',num2str(epoch), '_conv_weight.mat']);
+    load([folder, '/dt0.03_L20/1_1/',num2str(epoch), '_conv_weight.mat']);
     conv_weight1 = conv_weight;
-    load(['./', folder, '/dt0.03_L20/1_2/',num2str(epoch), '_conv_weight.mat']);
+    load([folder, '/dt0.03_L20/1_2/',num2str(epoch), '_conv_weight.mat']);
     conv_weight2 = conv_weight;
     L2(epoch,2) = 2*mean(mean((abs(conv_weight1(:) - conv_weight2(:)))./(abs(conv_weight1(:)) + abs(conv_weight2(:)))));
 
 
-    load(['./', folder,'/dt0.05_L20/1_1/',num2str(epoch), '_conv_weight.mat']);
+    load([folder,'/dt0.05_L20/1_1/',num2str(epoch), '_conv_weight.mat']);
     conv_weight1 = conv_weight;
-    load(['./', folder,'/dt0.05_L20/1_2/',num2str(epoch), '_conv_weight.mat']);
+    load([folder,'/dt0.05_L20/1_2/',num2str(epoch), '_conv_weight.mat']);
     conv_weight2 = conv_weight;
     L2(epoch,3) = 2*mean(mean((abs(conv_weight1(:) - conv_weight2(:)))./(abs(conv_weight1(:)) + abs(conv_weight2(:)))));
 
         
-    load(['./', folder,'/dt0.07_L20/1_1/',num2str(epoch), '_conv_weight.mat']);
+    load([folder,'/dt0.07_L20/1_1/',num2str(epoch), '_conv_weight.mat']);
     conv_weight1 = conv_weight;
-    load(['./', folder,'/dt0.07_L20/1_2/',num2str(epoch), '_conv_weight.mat']);
+    load([folder,'/dt0.07_L20/1_2/',num2str(epoch), '_conv_weight.mat']);
     conv_weight2 = conv_weight;
     L2(epoch,4) = 2*mean(mean((abs(conv_weight1(:) - conv_weight2(:)))./(abs(conv_weight1(:)) + abs(conv_weight2(:)))));
 
         
-    load(['./', folder,'/dt0.09_L20/1_1/',num2str(epoch), '_conv_weight.mat']);
+    load([folder,'/dt0.09_L20/1_1/',num2str(epoch), '_conv_weight.mat']);
     conv_weight1 = conv_weight;
-    load(['./', folder,'/dt0.09_L20/1_2/',num2str(epoch), '_conv_weight.mat']);
+    load([folder,'/dt0.09_L20/1_2/',num2str(epoch), '_conv_weight.mat']);
     conv_weight2 = conv_weight;
     L2(epoch,5) = 2*mean(mean((abs(conv_weight1(:) - conv_weight2(:)))./(abs(conv_weight1(:)) + abs(conv_weight2(:)))));
         

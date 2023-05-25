@@ -38,6 +38,8 @@ point perturbations (rows) for Resnet56 trained on CIFAR-10. It generates the da
 We provide ResNet56 with two activation functions, ReLU and Swish. Run:
 ```./instabillity/main6.py```
 
+Different seeds could be chosen by changing `r` in the arguments.
+
 We also provide data analysis code for this experiment in `./scripts/mean_variance.py`. It computes the final accuracy and standard deviation for input data.
 
 #### 3.2 Demonstration of Restrained Instabilities
@@ -45,6 +47,8 @@ We also provide data analysis code for this experiment in `./scripts/mean_varian
 We provide the code for showing the divergence phenomenon in network weights between the original SGD weights, and the perturbed SGD weights.
 It generates the data for two plots in Figure 2. Run:
 ```./instabillity/main2.py```
+
+Different learning rate divisor could be chosen by changing `n` in the arguments.
 
 We also provide code for producing those figures, `./instability/compute_iterationm` for Figure 2(left) and `./instability/compute_onelayer.m` for Figure 2(right) in section 4.2.
 

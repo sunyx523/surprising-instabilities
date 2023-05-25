@@ -2,12 +2,12 @@
 import numpy as np
 
 r = 1 #random seed
-loss1 = np.load('./result/accuracy/resnet_cifar10/test' + str(r) + '_cifar10_resnet_sgd_1.npy')
-loss2 = np.load('./result/accuracy/resnet_cifar10/test' + str(r) + '_cifar10_resnet_sgd_2.npy')
-loss3 = np.load('./result/accuracy/resnet_cifar10/test' + str(r) + '_cifar10_resnet_sgd_3.npy')
-loss4 = np.load('./result/accuracy/resnet_cifar10/test' + str(r) + '_cifar10_resnet_sgd_4.npy')
-loss5 = np.load('./result/accuracy/resnet_cifar10/test' + str(r) + '_cifar10_resnet_sgd_5.npy')
-loss6 = np.load('./result/accuracy/resnet_cifar10/test' + str(r) + '_cifar10_resnet_sgd_6.npy')
+loss1 = np.load('../result/parameter/accuracy/rtest' + str(r) + '_cifar10_resnet_sgd_1.npy')
+loss2 = np.load('../result/parameter/accuracy/test' + str(r) + '_cifar10_resnet_sgd_2.npy')
+loss3 = np.load('../result/parameter/accuracy/test' + str(r) + '_cifar10_resnet_sgd_3.npy')
+loss4 = np.load('../result/parameter/accuracy/test' + str(r) + '_cifar10_resnet_sgd_4.npy')
+loss5 = np.load('../result/parameter/accuracy/test' + str(r) + '_cifar10_resnet_sgd_5.npy')
+loss6 = np.load('../result/parameter/accuracy/test' + str(r) + '_cifar10_resnet_sgd_6.npy')
 
 #Compute the average accuracy for last ten epochs
 l1 = np.mean(loss1[-10:])

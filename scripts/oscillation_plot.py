@@ -5,14 +5,14 @@ import matplotlib.pyplot as plt
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 
 
-loss1 = np.load('./result/loss/nonlinear/loss_dt0.01_L20.npy')
-loss3 = np.load('./result/loss/nonlinear/loss_dt0.03_L20.npy')
-loss5 = np.load('./result/loss/nonlinear/loss_dt0.05_L20.npy')
-loss7 = np.load('./result/loss/nonlinear/loss_dt0.07_L20.npy')
-loss9 = np.load('./result/loss/nonlinear/loss_dt0.09_L20.npy')
-loss10 = np.load('./result/loss/nonlinear/loss_dt0.1_L20.npy')
-loss11 = np.load('./result/loss/nonlinear/loss_dt0.11_L20.npy')
-loss13 = np.load('./result/loss/nonlinear/loss_dt0.13_L20.npy')
+loss1 = np.load('../result/loss/nonlinear/loss_dt0.01_L20.npy')
+loss3 = np.load('../result/loss/nonlinear/loss_dt0.03_L20.npy')
+loss5 = np.load('../result/loss/nonlinear/loss_dt0.05_L20.npy')
+loss7 = np.load('../result/loss/nonlinear/loss_dt0.07_L20.npy')
+loss9 = np.load('../result/loss/nonlinear/loss_dt0.09_L20.npy')
+loss10 = np.load('../result/loss/nonlinear/loss_dt0.1_L20.npy')
+loss11 = np.load('../result/loss/nonlinear/loss_dt0.11_L20.npy')
+loss13 = np.load('../result/loss/nonlinear/loss_dt0.13_L20.npy')
 
 
 
