@@ -50,7 +50,7 @@ It generates the data for two plots in Figure 2. Run:
 
 Different learning rate divisor could be chosen by changing `n` in the arguments.
 
-We also provide code for producing those figures, `./instability/compute_iterationm` for Figure 2(left) and `./instability/compute_onelayer.m` for Figure 2(right) in section 4.2.
+We also provide code for producing those figures, `./instability/compute_iteration.m` for Figure 2(left) and `./instability/compute_onelayer.m` for Figure 2(right) in section 4.2.
 
 ### 4. PDE Stability Analysis of a Simplified CNN
 In folder `./single_layer`, we include the code for experiments on a single layer network.
