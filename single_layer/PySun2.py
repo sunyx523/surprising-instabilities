@@ -193,7 +193,7 @@ class Model_1LayerCNN():
 
 # Parameters
 num_epochs = 1000
-learning_rate = 0.05
+learning_rate = 0.05 #change for different learning rate
 ksize = 32
 isize = 256
 weight_decay = 20

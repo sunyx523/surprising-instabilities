@@ -24,9 +24,9 @@ The code was tested with Python 3.7.9, torch 1.8.0 on Ubuntu 18.04 (should work 
 We implemented a demo code for illustration of instability in discretizing the heat equation (`heat.py`). 
 It plots the variable `u` at different time.
 
-Set `dt = 0.4` it generates a plot for stable evolution.
+Tt generates a plot for stable evolution by setting `dt = 0.4`.
 
-Set `dt = 0.8` it generates a plot for unstable evolution.
+It generates a plot for unstable evolution by setting `dt = 0.8`.
 
 
 ### 3. Evidence of Instability in Training Deep Networks
@@ -38,7 +38,7 @@ point perturbations (rows) for Resnet56 trained on CIFAR-10. It generates the da
 We provide ResNet56 with two activation functions, ReLU and Swish. Run:
 ```./instabillity/main6.py```
 
-Different seeds could be chosen by changing `r` in the arguments.
+Different seed could be chosen by changing `r` in the arguments.
 
 We also provide data analysis code for this experiment in `./scripts/mean_variance.py`. It computes the final accuracy and standard deviation for input data.
 
@@ -50,7 +50,7 @@ It generates the data for two plots in Figure 2. Run:
 
 Different learning rate divisor could be chosen by changing `n` in the arguments.
 
-We also provide code for producing those figures, `./instability/compute_iteration.m` for Figure 2(left) and `./instability/compute_onelayer.m` for Figure 2(right) in section 4.2.
+We also provide code for producing Figure 2(right) in `./instability/compute_iteration.m`.
 
 ### 4. PDE Stability Analysis of a Simplified CNN
 In folder `./single_layer`, we include the code for experiments on a single layer network.
@@ -59,6 +59,8 @@ We provide code to validation two stability bounds for the linearized PDE (9). I
 discretization of lineared PDE (9). Run:
 ```./sinlge_layer/linear.py```
 
+Different learning rate could be chosen by changing `learning_rate` in the parameters.
+
 We also provide code for producing the Figure 3 in `./scripts/loss_plot.py`.
 
 #### 4.2 Restrained Instabilities in the Non-linear PDE
@@ -66,12 +68,18 @@ We provide the code for showing that restrained instabilites are present in the 
 It generates the loss plots for the non-linear PDE (8) for various choices of learning rates (dt). Run:
 ```./single_layer/PySun.py```
 
+Different learning rate could be chosen by changing `learning_rate` in the parameters.
+
 We also provide code for producing the Figure 4 (left) in `./scripts/oscillation_plot.py`.
 
 #### 4.3 L1 error accumulation in the non-linear PDE
 We provide the code for showing error amplification occurs in the (non-linear) gradient descent PDE of the one layer CNN.
 It generates the data for Figure 4(right). Run:
 ```./single_layer/PySun2.py```
+
+Different learning rate could be chosen by changing `learning_rate` in the parameters.
+
+We also provide code for producing the Figure 4 (right) in `./instability/compute_onelayer.m`.
 
 ## Thanks
 

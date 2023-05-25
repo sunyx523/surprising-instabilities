@@ -9,7 +9,7 @@ import numpy as np
 np.random.seed(7)
 num_epochs = 1000
 beta = 1
-learning_rate = 1e-8
+learning_rate = 1e-8 #change for different learning rate
 ksize = 32
 isize = 256
 weight_decay = 2.1e8
