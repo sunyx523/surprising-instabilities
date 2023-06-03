@@ -1,13 +1,27 @@
 '''Computes result for Table 1 in section 4.2'''
 import numpy as np
 
-r = 1 #random seed
-loss1 = np.load('../result/parameter/accuracy/rtest' + str(r) + '_cifar10_resnet_sgd_1.npy')
-loss2 = np.load('../result/parameter/accuracy/test' + str(r) + '_cifar10_resnet_sgd_2.npy')
-loss3 = np.load('../result/parameter/accuracy/test' + str(r) + '_cifar10_resnet_sgd_3.npy')
-loss4 = np.load('../result/parameter/accuracy/test' + str(r) + '_cifar10_resnet_sgd_4.npy')
-loss5 = np.load('../result/parameter/accuracy/test' + str(r) + '_cifar10_resnet_sgd_5.npy')
-loss6 = np.load('../result/parameter/accuracy/test' + str(r) + '_cifar10_resnet_sgd_6.npy')
+result_root = '../result/accuracy/cifar10_resnet_sgd/'
+mode = 'seed' #'seed' | 'perturb'
+
+if mode == 'seed':
+    r = 1 #random seed
+    loss1 = np.load(result_root + '/seed' + str(r) + '/test1.npy')
+    loss2 = np.load(result_root + '/seed' + str(r) + '/test2.npy')
+    loss3 = np.load(result_root + '/seed' + str(r) + '/test3.npy')
+    loss4 = np.load(result_root + '/seed' + str(r) + '/test4.npy')
+    loss5 = np.load(result_root + '/seed' + str(r) + '/test5.npy')
+    loss6 = np.load(result_root + '/seed' + str(r) + '/test6.npy')
+elif mode == 'perturb':
+    n = 1 #perturbation
+    loss1 = np.load(result_root + '/seed1/test' + str(n) + '.npy')
+    loss2 = np.load(result_root + '/seed2/test' + str(n) + '.npy')
+    loss3 = np.load(result_root + '/seed3/test' + str(n) + '.npy')
+    loss4 = np.load(result_root + '/seed4/test' + str(n) + '.npy')
+    loss5 = np.load(result_root + '/seed5/test' + str(n) + '.npy')
+    loss6 = np.load(result_root + '/seed6/test' + str(n) + '.npy')
+else:
+    raise Exception("Wrong mode")
 
 #Compute the average accuracy for last ten epochs
 l1 = np.mean(loss1[-10:])
