@@ -8,6 +8,7 @@ import torch.backends.cudnn as cudnn
 import torchvision
 import torchvision.transforms as transforms
 import warnings
+import os
 warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser()
@@ -33,6 +34,11 @@ torch.cuda.manual_seed(args.r)  # gpu
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True  # cudnn
 # torch.set_default_dtype(torch.bfloat16)
+
+#Make result path
+address = args.result_root + '/seed' + str(args.r)
+if not os.path.exists(address):
+    os.makedirs(address)
 
 if __name__ == '__main__':
     
